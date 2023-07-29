@@ -1,0 +1,11 @@
+{
+    "config_info": {
+        "notion_key" : "Coloque aqui sua Notion API Key", 
+        "openai_key" : "Coloque aqui sua chave OpenAI API Key",
+        "notion_db_id" : "Coloque aqui o ID do Banco de Dados do Notion",
+        "contact_number" : "Número de Whatsapp do destinatário. Formato +55XXXXXXXXXXX"
+    },
+    "example_text": {
+        "content": "Coloque aqui um texto de exemplo"
+    }
+}
