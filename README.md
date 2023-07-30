@@ -2,7 +2,7 @@
 
    Sistema projetado para automatizar a geração de relátorios diários para meu supervisor consumindo Notion API e OpenAI APi com envio por WhatsApp utilizando PyWhatKit. A ideia é adquirir e treinar conhecimentos com um sistema útil que facilita uma tarefa repetitiva.
 
-## Funcioanmento:
+## Funcionamento:
 
    A partir de uma requisição para a API do Notion são extraídas informações do meu planejamento profissional. As tarefas são transformadas em dicionários com seus títulos, descrições e categorias.
 
