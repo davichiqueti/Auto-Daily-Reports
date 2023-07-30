@@ -1,7 +1,6 @@
 # Auto Report - Automatização de Relatórios Diários
 
-   Automatização de Relatórios Diários consumindo API do Notion e da OpenAI com envio por WhatsApp utilizando PyWhatKit. O objetivo desse projeto é automatizar uma tarefa    
-   repetitiva com uma solução útil e criativa. Automatização de Relatórios Diários
+   Sistema projetado para automatizar a geração de relátorios diários para meu supervisor consumindo Notion API e OpenAI APi com envio por WhatsApp utilizando PyWhatKit. A ideia é adquirir e treinar conhecimentos com um sistema útil que facilita uma tarefa repetitiva.
 
 ## Funcioanmento:
 
