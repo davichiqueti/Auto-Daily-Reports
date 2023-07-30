@@ -4,9 +4,9 @@
 
 ## Funcionamento:
 
-   A partir de uma requisição para a API do Notion são extraídas informações do meu planejamento profissional. As tarefas são transformadas em dicionários com seus títulos, descrições e categorias.
+   A partir de uma requisição para a API do Notion são extraídas informações do meu planejamento profissional. As tarefas do dia atual que foram concluídas são transformadas em dicionários com seus títulos, categorias e descrições.
 
-   As atividades do dia atual são enviadas no body de uma requisição para a API da OpenAI pedindo que o ChatGPT faça um relatório sobre essas atividades. Para maior precisão um exemplo e  outras instruções são definidos em ```prompt.py```.
+   Os dados sõa enviados no body de uma requisição para a API da OpenAI pedindo que o ChatGPT faça um relatório sobre essas atividades. Para maior precisão um exemplo e  outras instruções são definidos em ```prompt.py```.
 
    Por fim, a biblioteca PyWhatKit é utilizada para fazer o envio desse relátorio para meu superior. Seu número está configurado no arquivo ```config.json``` assim como as chaves das API´s e o ID da tabela do Notion.
 
