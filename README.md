@@ -21,5 +21,7 @@
 ## Referências:
 
    [Documentação Biblioteca Requests](https://requests.readthedocs.io/en/latest/)
+   
    [Documentação Notion API](https://developers.notion.com/reference/intro)
+   
    [Documentação OpenAI API](https://platform.openai.com/docs/introduction)
