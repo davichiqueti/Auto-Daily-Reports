@@ -34,16 +34,19 @@ class AutoReport():
         for item in data['results']:
 
             task_date = item['properties']['Date']['date']['start']
-            task_infotxt = item['properties']['About Task']['rich_text']
+            task_checkbox = item['properties']['Done']['checkbox']
 
-            if task_date == str(self.report_date) and item['properties']['Done']['checkbox'] == True:
+            if (task_date == str(self.report_date)) and (task_checkbox == True):
                 # Tratamento dos dados que são da data atual e estão marcados como concluídos
-                tag_property = item['properties']['Tags']['select']
+
+                task_name = item['properties']['Name']['title'][0]['text']['content']
+                task_tag = item['properties']['Tags']['select']
+                task_info_list = item['properties']['Description']['rich_text']
 
                 item_dict = {
-                    'Name': item['properties']['Name']['title'][0]['text']['content'],
-                    'Tags': tag_property['name'] if tag_property != None else ' ', # Vericando se a tarefa possui tag
-                    'About Task': task_infotxt[0]['plain_text'] if task_infotxt != None else ' ', # Vericando a tarefa possui descrição
+                    'Name': task_name,
+                    'Tags': task_tag['name'] if task_tag != None else ' ', # Vericando se a tarefa possui tag
+                    'Description': task_info_list[0]['plain_text'] if len(task_info_list) != 0 else ' ' # Vericando se a tarefa possui descrição
                 }
 
                 notion_data.append(item_dict)
@@ -78,6 +81,7 @@ class AutoReport():
         body = json.dumps(body)
         response = requests.post(url, headers=headers, data=body)
         data = response.json()
+
         self.final_text = data["choices"][0]['message']['content']
 
 
